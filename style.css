@@ -1,0 +1,174 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: url('../img/bg.png') no-repeat center center/cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 0, 0, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height:30px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ffdede;
+}
+
+/* Main Sections */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main section {
+    margin-bottom: 50px;
+}
+
+/* Hero Section */
+main section img {
+    width: 200px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+main section p {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+main section input {
+    padding: 15px 20px;
+    width: 320px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+main section input:focus {
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Delivery Info Section */
+.delivery-info {
+    background-color: rgba(255, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease;
+}
+
+.delivery-info header h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.delivery-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.delivery-info ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+
+.delivery-info ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #ff0000;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    main section input {
+        width: 90%;
+    }
+
+    .delivery-info {
+        padding: 20px;
+        margin: 20px;
+    }
+}
